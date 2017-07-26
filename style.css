@@ -3,6 +3,11 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: helvetica;
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+   -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+     -o-animation: fadein 2s; /* Opera < 12.1 */
+        animation: fadein 2s;
 }
 
 a {
@@ -155,7 +160,9 @@ h4 {
 
 .portfolio-item {
   position: relative;
-  margin-top: 30px;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 0 34px;
 }
 
 .work-link {
@@ -168,41 +175,13 @@ h4 {
 
 .accent {
   position: absolute;
-  bottom: 38px;
+  bottom: 53px;
   background-color: #F2EBF5;
   height: 20px;
   z-index: -1;
   margin: 0 auto;
   left: 0;
   right: 0;
-}
-
-#inspiration-accent {
-  max-width: 425px;
-}
-
-#cubicl-accent {
-  max-width: 250px;
-}
-
-#generated-accent {
-  max-width: 450px;
-}
-
-#bitiful-accent {
-  max-width: 375px;
-}
-
-#got-accent {
-  max-width: 475px;
-}
-
-#ac-accent {
-  max-width: 600px;
-}
-
-#airqueue-accent {
-  max-width: 425px;
 }
 
 footer {
@@ -253,4 +232,118 @@ footer {
     display: none;
   }
 
+}
+
+@media only screen and (max-width: 450px) {
+
+  #linked-in {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    position: absolute;
+    left: 25%;
+    top: 50px;
+    text-decoration: none;
+    position: fixed;
+  }
+
+  #contact {
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    position: absolute;
+    right: 25%;
+    top: 50px;
+    text-decoration: none;
+    position: fixed;
+
+  }
+
+  .emblem {
+    display: none;
+  }
+
+  .main-lockup {
+    margin: 160px auto 0 auto;
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+
+  #coloured-camo {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+  }
+
+  #offset-logo-box {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border: 6px solid #2E3192;
+    right: 5px;
+    bottom: 5px;
+  }
+
+  #letter-b {
+    width: 150px;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+  }
+
+  #inspiration-accent {
+    max-width: 250px;
+  }
+
+  #cubicl-accent {
+    max-width: 150px;
+  }
+
+  #got-accent {
+    max-width: 300px;
+  }
+
+
+
+  #colors-accent {
+    max-width: 375px;
+  }
+
+  h3 {
+    font-size: 28px;
+    color: #2E3192;
+    letter-spacing: 0.1em;
+  }
+
+}
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
